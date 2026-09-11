@@ -1,0 +1,26 @@
+{
+  "name": "freshservice-connector",
+  "version": "1.0.0",
+  "description": "TypeScript connector for the FreshService API v2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "freshservice",
+    "itsm",
+    "api"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
