@@ -2,23 +2,27 @@ import { FreshServiceClient, FreshServiceConfig, FreshServiceError } from './cli
 import { TicketsResource } from './resources/tickets';
 import { AssetsResource } from './resources/assets';
 import { AgentsResource } from './resources/agents';
+import { WorkspacesResource } from './resources/workspaces';
 
 export { FreshServiceError } from './client';
 export type { FreshServiceConfig } from './client';
 export type { Ticket, CreateTicketParams, UpdateTicketParams, ListTicketsParams } from './types/ticket';
 export type { Asset, AssetType, CreateAssetParams, UpdateAssetParams, ListAssetsParams } from './types/asset';
 export type { Agent, Group, ListAgentsParams, ListGroupsParams } from './types/agent';
+export type { Workspace } from './types/workspace';
 
 export class FreshService {
   readonly tickets: TicketsResource;
   readonly assets: AssetsResource;
   readonly agents: AgentsResource;
+  readonly workspaces: WorkspacesResource;
 
   constructor(config: FreshServiceConfig) {
     const client = new FreshServiceClient(config);
     this.tickets = new TicketsResource(client);
     this.assets = new AssetsResource(client);
     this.agents = new AgentsResource(client);
+    this.workspaces = new WorkspacesResource(client);
   }
 
   /** Build a client from environment variables:

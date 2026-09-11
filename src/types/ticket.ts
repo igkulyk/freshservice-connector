@@ -85,5 +85,6 @@ export interface ListTicketsParams {
   type?: string;
   status?: TicketStatus;
   priority?: TicketPriority;
+  workspace_id?: number;
   include?: ('stats' | 'requester' | 'conversations' | 'problem' | 'assets')[];
 }
