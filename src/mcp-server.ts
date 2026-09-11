@@ -12,7 +12,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 import { FreshService, FreshServiceError } from './index.js';
-import type { ListTicketsParams, CreateTicketParams, UpdateTicketParams, TicketStatus, TicketPriority } from './types/ticket.js';
+import type { ListTicketsParams, CreateTicketParams, UpdateTicketParams } from './types/ticket.js';
 
 const STATUS_LABELS: Record<number, string> = {
   2: 'Open', 3: 'Pending', 4: 'Resolved', 5: 'Closed',
