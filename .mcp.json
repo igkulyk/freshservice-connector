@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "freshservice": {
-      "command": "npx",
-      "args": ["ts-node", "src/mcp-server.ts"],
+      "command": "python",
+      "args": ["C:\\Users\\igor.kulyk\\OneDrive - Sectigo\\Desktop\\AI\\freshservice-connector-py\\mcp_server.py"],
       "env": {
         "FRESHSERVICE_DOMAIN": "${FRESHSERVICE_DOMAIN}",
         "FRESHSERVICE_API_KEY": "${FRESHSERVICE_API_KEY}"
